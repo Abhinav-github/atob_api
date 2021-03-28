@@ -11,7 +11,7 @@ def graph():
     world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
 
     ax=world.plot(figsize=(10, 6))
-    gdf.plot(ax=ax, marker='o', color='red', markersize=15);
+    gdf.plot(ax=ax, marker='o', color='red', markersize=.5);
     plt.savefig("truck locations.png")
 
     print('test3')
