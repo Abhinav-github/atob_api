@@ -5,11 +5,11 @@ from haversine import haversine_checker
 import sched
 import time
 
-
-while True:
-    data = ping_api()
-    trucks = format(data)
-    write_csv(trucks)
-    graph()
-    haversine_checker(trucks)
-    time.sleep(10.0)
+if __name__ == “main”:
+    while True:
+        data = ping_api()
+        trucks = format(data)
+        write_csv(trucks)
+        graph()
+        haversine_checker(trucks)
+        time.sleep(10.0)
